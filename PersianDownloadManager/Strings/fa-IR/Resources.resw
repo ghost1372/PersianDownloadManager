@@ -1,0 +1,892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainWindowSetting" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="ToolBarAdd.Label" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="ToolBarDelete.Label" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="ToolBarDeleteFinished.Label" xml:space="preserve">
+    <value>حذف تکمیل شده ها</value>
+  </data>
+  <data name="ToolBarResume.Label" xml:space="preserve">
+    <value>ادامه</value>
+  </data>
+  <data name="ToolBarSchedule.Label" xml:space="preserve">
+    <value>زمان بندی</value>
+  </data>
+  <data name="ToolBarSettings.Label" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="ToolBarStartQueue.Label" xml:space="preserve">
+    <value>آغاز صف</value>
+  </data>
+  <data name="ToolBarStopQueue.Label" xml:space="preserve">
+    <value>توقف صف</value>
+  </data>
+  <data name="SidebarGroupAll" xml:space="preserve">
+    <value>همه</value>
+  </data>
+  <data name="SidebarGroupAllDownload" xml:space="preserve">
+    <value>همه دانلود ها</value>
+  </data>
+  <data name="SidebarGroupApps" xml:space="preserve">
+    <value>برنامه ها</value>
+  </data>
+  <data name="SidebarGroupArchives" xml:space="preserve">
+    <value>فایل های فشرده</value>
+  </data>
+  <data name="SidebarGroupDocuments" xml:space="preserve">
+    <value>اسناد</value>
+  </data>
+  <data name="SidebarGroupFinishedDownload" xml:space="preserve">
+    <value>دانلود های تمام شده</value>
+  </data>
+  <data name="SidebarGroupMedia" xml:space="preserve">
+    <value>تصویری</value>
+  </data>
+  <data name="SidebarGroupMusics" xml:space="preserve">
+    <value>موسیقی</value>
+  </data>
+  <data name="SidebarGroupUnFinishedDownload" xml:space="preserve">
+    <value>دانلود های ناتمام</value>
+  </data>
+  <data name="TrayIconAboutItem" xml:space="preserve">
+    <value>درباره</value>
+  </data>
+  <data name="TrayIconExitItem" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="TrayIconOpenItem" xml:space="preserve">
+    <value>بازکردن پرشین دانلود منیجر</value>
+  </data>
+  <data name="TrayIconTooltip" xml:space="preserve">
+    <value>پرشین دانلود منیجر</value>
+  </data>
+  <data name="ToolBarStop.Label" xml:space="preserve">
+    <value>توقف</value>
+  </data>
+  <data name="MenuBarFile.Title" xml:space="preserve">
+    <value>فایل</value>
+  </data>
+  <data name="MenuBarFileAdd.Text" xml:space="preserve">
+    <value>افزودن آدرس جدید</value>
+  </data>
+  <data name="MenuBarFileAddGroup.Text" xml:space="preserve">
+    <value>اضافه نمودن دانلود گروهی</value>
+  </data>
+  <data name="MenuBarFileAddFromClipboard.Text" xml:space="preserve">
+    <value>اضافه کردن لیست لینک از حافظه ویندوز</value>
+  </data>
+  <data name="MenuBarFileImport.Text" xml:space="preserve">
+    <value>وارد کردن</value>
+  </data>
+  <data name="MenuBarFileExport.Text" xml:space="preserve">
+    <value>خروجی</value>
+  </data>
+  <data name="MenuBarFileImportPDM.Text" xml:space="preserve">
+    <value>از فایل PDM</value>
+  </data>
+  <data name="MenuBarFileImportText.Text" xml:space="preserve">
+    <value>از فایل Text</value>
+  </data>
+  <data name="MenuBarFileExportPDM.Text" xml:space="preserve">
+    <value>به فایل PDM</value>
+  </data>
+  <data name="MenuBarFileExportText.Text" xml:space="preserve">
+    <value>به فایل Text</value>
+  </data>
+  <data name="MenuBarFileExit.Text" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="MenuBarDownload.Title" xml:space="preserve">
+    <value>دانلود ها</value>
+  </data>
+  <data name="MenuBarDownloadPauseAll.Text" xml:space="preserve">
+    <value>توقف همه</value>
+  </data>
+  <data name="MenuBarDownloadStopAll.Text" xml:space="preserve">
+    <value>توقف همه</value>
+  </data>
+  <data name="MenuBarDownloadDeleteFinished.Text" xml:space="preserve">
+    <value>حذف دانلود های تکمیل شده</value>
+  </data>
+  <data name="MenuBarDownloadSchedule.Text" xml:space="preserve">
+    <value>زمانبندی</value>
+  </data>
+  <data name="MenuBarDownloadSettings.Text" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="MenuBarDownloadSpeedLimit.Text" xml:space="preserve">
+    <value>محدود کننده سرعت</value>
+  </data>
+  <data name="MenuBarDownloadSpeedLimitActive.Text" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="MenuBarDownloadSpeedLimitDeActive.Text" xml:space="preserve">
+    <value>غیرفعال</value>
+  </data>
+  <data name="MenuBarDownloadSpeedLimitSettings.Text" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="MenuBarAbout.Title" xml:space="preserve">
+    <value>درباره</value>
+  </data>
+  <data name="MenuBarAboutUs.Text" xml:space="preserve">
+    <value>درباره ما</value>
+  </data>
+  <data name="MenuBarAboutGithub.Text" xml:space="preserve">
+    <value>گیتهاب</value>
+  </data>
+  <data name="MenuBarAboutUpdate.Text" xml:space="preserve">
+    <value>بروزرسانی</value>
+  </data>
+  <data name="MainWindowAutoSuggestBox.PlaceholderText" xml:space="preserve">
+    <value>جستجو...</value>
+  </data>
+  <data name="SettingsPageGeneral.Header" xml:space="preserve">
+    <value>عمومی</value>
+  </data>
+  <data name="SettingsPageDownload.Header" xml:space="preserve">
+    <value>دانلود</value>
+  </data>
+  <data name="SettingsPageTheme.Header" xml:space="preserve">
+    <value>ظاهر و رفتار</value>
+  </data>
+  <data name="SettingsPageUpdate.Header" xml:space="preserve">
+    <value>بروزرسانی برنامه</value>
+  </data>
+  <data name="SettingsPageAbout.Header" xml:space="preserve">
+    <value>درباره ما</value>
+  </data>
+  <data name="SettingsPageGeneral.Description" xml:space="preserve">
+    <value>تنظیمات برنامه را تغییر دهید</value>
+  </data>
+  <data name="SettingsPageAbout.Description" xml:space="preserve">
+    <value>درباره پرشین دانلود منیجر و توسعه دهنده</value>
+  </data>
+  <data name="SettingsPageDownload.Description" xml:space="preserve">
+    <value>تنظیمات دانلودر را تغییر دهید تا بهترین نتیجه را بگیرید</value>
+  </data>
+  <data name="SettingsPageTheme.Description" xml:space="preserve">
+    <value>راه‌های مختلف برای سفارشی‌سازی ظاهر و عملکرد برنامه خود را بررسی کنید. می‌توانید متریال، تم، رنگ تأکیدی و گزینه‌های بیشتری را تغییر دهید تا با سبک و سلیقه خود مطابقت داشته باشد.</value>
+  </data>
+  <data name="SettingsPageUpdate.Description" xml:space="preserve">
+    <value>نسخه های جدید را بررسی و دانلود کنید</value>
+  </data>
+  <data name="SettingsPageHeader" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="AboutUsSettingPage_RelatedLink.Text" xml:space="preserve">
+    <value>لینک های مرتبط</value>
+  </data>
+  <data name="AboutUsSettingPage_SourceCode.Content" xml:space="preserve">
+    <value>سورس کد</value>
+  </data>
+  <data name="AboutUsSettingPage_ReleaseNote.Content" xml:space="preserve">
+    <value>یادداشت انتشار</value>
+  </data>
+  <data name="AboutUsSettingPage_About.Header" xml:space="preserve">
+    <value>پرشین دانلود منیجیر</value>
+  </data>
+  <data name="AboutUsSettingPage_About.Description" xml:space="preserve">
+    <value>پرشین دانلود منیجر زیبا و سریع</value>
+  </data>
+  <data name="AppUpdateSettingPage_LastUpdate.Text" xml:space="preserve">
+    <value>آخرین تاریخ بروزرسانی</value>
+  </data>
+  <data name="AppUpdateSettingPage_CheckForUpdate.Content" xml:space="preserve">
+    <value>بررسی برای نسخه جدید</value>
+  </data>
+  <data name="AppUpdateSettingPage_ReleaseNote.Content" xml:space="preserve">
+    <value>یادداشت انتشار</value>
+  </data>
+  <data name="AppUpdateSettingPage_DownloadUpdate.Content" xml:space="preserve">
+    <value>دانلود بروزرسانی</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_CurrentVersion" xml:space="preserve">
+    <value>نسخه فعلی</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_CheckVersion" xml:space="preserve">
+    <value>بررسی برای نسخه جدید</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_FoundVersion" xml:space="preserve">
+    <value>ما یک نسخه جدید پیدا کردیم {0} که در {1} ایجاد شده و در {2} منتشر شده است</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_FoundPreReleaseVersion" xml:space="preserve">
+    <value>ما یک نسخه پیشنمایش جدید پیدا کردیم {0} که در {1} ایجاد شده و در {2} منتشر شده است</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_NoNewVersion" xml:space="preserve">
+    <value>شما از آخرین نسخه استفاده می کنید</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_ErrorConnection" xml:space="preserve">
+    <value>خطا در اتصال</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_ReleaseNoteTitle" xml:space="preserve">
+    <value>یادداشت انتشار</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_ReleaseNoteClose" xml:space="preserve">
+    <value>بستن</value>
+  </data>
+  <data name="Main_FlowDirection.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="ThemeSettingPage_Theme.Header" xml:space="preserve">
+    <value>پوسته برنامه</value>
+  </data>
+  <data name="ThemeSettingPage_Theme.Description" xml:space="preserve">
+    <value>پوسته‌ای را انتخاب کنید که با سلیقه و حال‌وهوای شما هماهنگ باشد. می‌توانید بین حالت تیره، روشن یا پیروی از تنظیمات سیستم یکی را انتخاب کنید.</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeLight.Content" xml:space="preserve">
+    <value>روشن</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeDark.Content" xml:space="preserve">
+    <value>تاریک</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeSystem.Content" xml:space="preserve">
+    <value>پیشفرض سیستم</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdrop.Header" xml:space="preserve">
+    <value>پس زمینه</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdrop.Description" xml:space="preserve">
+    <value>ظاهر متریال پس‌زمینه‌ی پشت برنامه را تغییر دهید. می‌توانید بین میکا و اکریلیک یکی را انتخاب کنید.</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdropMica.Content" xml:space="preserve">
+    <value>میکا</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdropMicaAlt.Content" xml:space="preserve">
+    <value>میکا آلت</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdropAcrylic.Content" xml:space="preserve">
+    <value>آکریلیک</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdropAcrylicThin.Content" xml:space="preserve">
+    <value>آکریلیک ساده</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeAccentColor.Header" xml:space="preserve">
+    <value>رنگ برجسته</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeAccentColor.Description" xml:space="preserve">
+    <value>رنگ نمایشی برنامه را با رنگ برجسته‌ی سیستم عامل ویندوز هماهنگ نمایید.</value>
+  </data>
+  <data name="GeneralSettingPage_UIFont.Header" xml:space="preserve">
+    <value>فونت رابط کاربری</value>
+  </data>
+  <data name="GeneralSettingPage_UIFont.Description" xml:space="preserve">
+    <value>فونت رابط کاربری را به فونت دلخواه تغییر دهید</value>
+  </data>
+  <data name="GeneralSettingPage_Language.Header" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="GeneralSettingPage_Language.Description" xml:space="preserve">
+    <value>تغییر زبان مورد استفاده در رابط کاربری برنامه.</value>
+  </data>
+  <data name="GeneralSettingPage_Debug.Header" xml:space="preserve">
+    <value>تشخیص خطا و بازخورد (نیاز به راه‌اندازی مجدد)</value>
+  </data>
+  <data name="GeneralSettingPage_Debug.Description" xml:space="preserve">
+    <value>با ارسال اختیاری داده‌های تشخیصی، به ما کمک کنید این برنامه را بهبود دهیم تا خطاها برطرف شده و عملکرد و قابلیت‌ها ارتقا یابد.</value>
+  </data>
+  <data name="RestartNotificationText.Subtitle" xml:space="preserve">
+    <value>برای اعمال این تنظیمات، برنامه باید راه‌اندازی مجدد شود، آیا می خواهید برنامه را دوباره راه‌اندازی کنید؟</value>
+  </data>
+  <data name="YesButton.Content" xml:space="preserve">
+    <value>بله</value>
+  </data>
+  <data name="NoButton.Content" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="GeneralSettingPage_AutoStartup.Header" xml:space="preserve">
+    <value>اجرای خودکار</value>
+  </data>
+  <data name="GeneralSettingPage_AutoStartup.Description" xml:space="preserve">
+    <value>اجرای خودکار برنامه هنگام ورود به ویندوز</value>
+  </data>
+  <data name="AboutWindow.Text" xml:space="preserve">
+    <value>پرشین دانلود منیجیر</value>
+  </data>
+  <data name="AboutWindowDeveloper.Text" xml:space="preserve">
+    <value>توسعه یافته توسط مهدی حسینی</value>
+  </data>
+  <data name="TvFileName.Header" xml:space="preserve">
+    <value>نام فایل</value>
+  </data>
+  <data name="TvFileSize.Header" xml:space="preserve">
+    <value>سایز</value>
+  </data>
+  <data name="TvStatus.Header" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="TvRemainingTime.Header" xml:space="preserve">
+    <value>زمان باقی مانده</value>
+  </data>
+  <data name="TvSpeed.Header" xml:space="preserve">
+    <value>سرعت</value>
+  </data>
+  <data name="TvQueue.Header" xml:space="preserve">
+    <value>صف</value>
+  </data>
+  <data name="TvLastDate.Header" xml:space="preserve">
+    <value>آخرین تاریخ دانلود</value>
+  </data>
+  <data name="TvAddedDate.Header" xml:space="preserve">
+    <value>تاریخ اضافه به لیست</value>
+  </data>
+  <data name="TvSaveLocation.Header" xml:space="preserve">
+    <value>محل ذخیره</value>
+  </data>
+  <data name="ContextMenuOpen.Text" xml:space="preserve">
+    <value>بازکردن</value>
+  </data>
+  <data name="ContextMenuOpenFolder.Text" xml:space="preserve">
+    <value>بازکردن پوشه</value>
+  </data>
+  <data name="ContextMenuReDownload.Text" xml:space="preserve">
+    <value>دانلود</value>
+  </data>
+  <data name="ContextMenuResumeDownload.Text" xml:space="preserve">
+    <value>ادامه دانلود</value>
+  </data>
+  <data name="ContextMenuStopDownload.Text" xml:space="preserve">
+    <value>توقف دانلود</value>
+  </data>
+  <data name="ContextMenuAddQueue.Text" xml:space="preserve">
+    <value>افزودن به صف اصلی</value>
+  </data>
+  <data name="ContextMenuRemoveQueue.Text" xml:space="preserve">
+    <value>حذف از صف اصلی</value>
+  </data>
+  <data name="ContextMenuDelete.Text" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="ContextMenuProperties.Text" xml:space="preserve">
+    <value>خصوصیات</value>
+  </data>
+  <data name="AddLinkDialogText.Header" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="AddLinkDialogText.PlaceholderText" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="AddLinkDialog.PrimaryButtonContent" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="AddLinkDialog.CloseButtonContent" xml:space="preserve">
+    <value>انصراف</value>
+  </data>
+  <data name="AddLinkDialog.Header" xml:space="preserve">
+    <value>آدرس جدیدی برای دانلود وارد کنید</value>
+  </data>
+  <data name="AddLinkDialogMessageBoxTitle" xml:space="preserve">
+    <value>خطا</value>
+  </data>
+  <data name="AddLinkDialogMessageBoxEmptyMessage" xml:space="preserve">
+    <value>آدرس نمی تواند خالی باشد</value>
+  </data>
+  <data name="AddLinkDialogMessageBoxNotValidMessage" xml:space="preserve">
+    <value>آدرس معتبر نیست</value>
+  </data>
+  <data name="AddGroupLinkDialogInfoBar.Message" xml:space="preserve">
+    <value>این امکان برای شما وجود دارد که نام فایل هایی را که پشت سرهم ردیف شده اند را در برنامه وارد کنید. از علامت ستاره (ژوکر) به جای اعدادی که ردیف شده اند استفاده کنید.
+برای مثال: https://www.localhost.com/picture/img*.jpg</value>
+  </data>
+  <data name="AddGroupLinkDialogFromNumber.Header" xml:space="preserve">
+    <value>از</value>
+  </data>
+  <data name="AddGroupLinkDialogToNumber.Header" xml:space="preserve">
+    <value>تا</value>
+  </data>
+  <data name="AddGroupLinkDialogSizeNumber.Header" xml:space="preserve">
+    <value>اندازه ژوکر</value>
+  </data>
+  <data name="AddGroupLinkDialogFirstLink.Header" xml:space="preserve">
+    <value>اولین فایل</value>
+  </data>
+  <data name="AddGroupLinkDialogSecondLink.Header" xml:space="preserve">
+    <value>دومین فایل</value>
+  </data>
+  <data name="AddGroupLinkDialogLastLink.Header" xml:space="preserve">
+    <value>آخرین فایل</value>
+  </data>
+  <data name="AddGroupLinkDialogUrl.Header" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="AddGroupLinkDialogUrl.PlaceholderText" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="AddGroupLinkDialog.Header" xml:space="preserve">
+    <value>دانلود گروهی</value>
+  </data>
+  <data name="AddGroupLinkDialog.PrimaryButtonContent" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="AddGroupLinkDialog.CloseButtonContent" xml:space="preserve">
+    <value>انصراف</value>
+  </data>
+  <data name="DownloadSettingPage_SaveLocation.Header" xml:space="preserve">
+    <value>محل ذخیره</value>
+  </data>
+  <data name="DownloadSettingPage_SaveLocation.Description" xml:space="preserve">
+    <value>محل پیشفرض را که دانلود ها در آن ذخیره خواهند شد را انتخاب کنید</value>
+  </data>
+  <data name="DownloadSettingPage_Browse.Content" xml:space="preserve">
+    <value>انتخاب پوشه</value>
+  </data>
+  <data name="DownloadSettingPage_Performance.Header" xml:space="preserve">
+    <value>عملکرد</value>
+  </data>
+  <data name="DownloadSettingPage_Performance.Description" xml:space="preserve">
+    <value>تنظیمات مربوط به سرعت دانلود، بخش‌بندی فایل و پردازش موازی.</value>
+  </data>
+  <data name="DownloadSettingPage_BufferBlockSize.Header" xml:space="preserve">
+    <value>اندازه بلوک بافر</value>
+  </data>
+  <data name="DownloadSettingPage_BufferBlockSize.Description" xml:space="preserve">
+    <value>اندازه هر بلوک داده‌ای که دانلود می‌شود. مقادیر بزرگ‌تر می‌توانند سرعت دانلود را افزایش دهند، اما حافظه بیشتری مصرف می‌کنند.</value>
+  </data>
+  <data name="DownloadSettingPage_ChunkCount.Header" xml:space="preserve">
+    <value>تعداد بخش‌های دانلود</value>
+  </data>
+  <data name="DownloadSettingPage_ChunkCount.Description" xml:space="preserve">
+    <value>حداکثر تعداد بخش‌هایی که فایل برای دانلود به آن‌ها تقسیم می‌شود.</value>
+  </data>
+  <data name="DownloadSettingPage_MinimumSizeOfChunking.Header" xml:space="preserve">
+    <value>حداقل اندازه فایل برای بخش‌بندی</value>
+  </data>
+  <data name="DownloadSettingPage_MinimumSizeOfChunking.Description" xml:space="preserve">
+    <value>فایل‌هایی که از این مقدار کوچک‌تر باشند، به‌صورت یکپارچه و بدون بخش‌بندی دانلود می‌شوند.</value>
+  </data>
+  <data name="DownloadSettingPage_MinimumChunkSize.Header" xml:space="preserve">
+    <value>حداقل اندازه هر بخش</value>
+  </data>
+  <data name="DownloadSettingPage_MinimumChunkSize.Description" xml:space="preserve">
+    <value>با کاهش تعداد بخش‌ها، از کوچک شدن بیش از حد هر بخش جلوگیری می‌کند.</value>
+  </data>
+  <data name="DownloadSettingPage_ParallelDownload.Header" xml:space="preserve">
+    <value>دانلود موازی</value>
+  </data>
+  <data name="DownloadSettingPage_ParallelDownload.Description" xml:space="preserve">
+    <value>در صورت پشتیبانی سرور، بخش‌های مختلف فایل را به‌طور هم‌زمان دانلود می‌کند.</value>
+  </data>
+  <data name="DownloadSettingPage_ParallelCount.Header" xml:space="preserve">
+    <value>تعداد اتصال‌های موازی</value>
+  </data>
+  <data name="DownloadSettingPage_ParallelCount.Description" xml:space="preserve">
+    <value>حداکثر تعداد بخش‌هایی که به‌صورت هم‌زمان دانلود می‌شوند. اگر مقدار 0  یا کمتر درنظر گرفته شود تعداد آن با تعداد بخش ها یکسان خواهد بود</value>
+  </data>
+  <data name="DownloadSettingPage_Network.Header" xml:space="preserve">
+    <value>شبکه</value>
+  </data>
+  <data name="DownloadSettingPage_Network.Description" xml:space="preserve">
+    <value>تنظیم محدودیت سرعت، تعداد تلاش مجدد و مهلت‌های زمانی ارتباط شبکه.</value>
+  </data>
+  <data name="DownloadSettingPage_Resume.Header" xml:space="preserve">
+    <value>ادامه دانلود و فایل‌ها</value>
+  </data>
+  <data name="DownloadSettingPage_Resume.Description" xml:space="preserve">
+    <value>تنظیمات مربوط به ادامه دانلود، فایل‌های موقت و نحوه برخورد با فایل‌های موجود.</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumBytesPerSecond.Header" xml:space="preserve">
+    <value>محدودیت سرعت</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumBytesPerSecond.Description" xml:space="preserve">
+    <value>حداکثر سرعت دانلود بر حسب بایت در ثانیه. مقدار ۰ به معنی بدون محدودیت است.</value>
+  </data>
+  <data name="DownloadSettingPage_MaxTryAgainOnFailure.Header" xml:space="preserve">
+    <value>تعداد تلاش مجدد</value>
+  </data>
+  <data name="DownloadSettingPage_MaxTryAgainOnFailure.Description" xml:space="preserve">
+    <value>حداکثر تعداد دفعات تلاش مجدد در صورت شکست دانلود.</value>
+  </data>
+  <data name="DownloadSettingPage_BlockTimeout.Header" xml:space="preserve">
+    <value>مهلت انتظار بلوک</value>
+  </data>
+  <data name="DownloadSettingPage_BlockTimeout.Description" xml:space="preserve">
+    <value>حداکثر زمان انتظار برای دریافت هر بلوک داده پیش از پایان مهلت. (میلی ثانیه)</value>
+  </data>
+  <data name="DownloadSettingPage_HttpClientTimeout.Header" xml:space="preserve">
+    <value>مهلت درخواست HTTP</value>
+  </data>
+  <data name="DownloadSettingPage_HttpClientTimeout.Description" xml:space="preserve">
+    <value>حداکثر مدت‌زمان انتظار برای هر درخواست HTTP پیش از لغو آن.  (میلی ثانیه)</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytes.Header" xml:space="preserve">
+    <value>محدودیت بافر حافظه</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytes.Description" xml:space="preserve">
+    <value>حداکثر حافظه‌ای که برای بافر کردن داده‌های دانلودشده استفاده می‌شود. پس از رسیدن به این مقدار، داده‌ها روی دیسک نوشته می‌شوند. مقدار ۰ به معنی بدون محدودیت است.</value>
+  </data>
+  <data name="DownloadSettingPage_EnableAutoResumeDownload.Header" xml:space="preserve">
+    <value>ادامه خودکار دانلود</value>
+  </data>
+  <data name="DownloadSettingPage_EnableAutoResumeDownload.Description" xml:space="preserve">
+    <value>در صورت امکان، دانلودهای نیمه‌تمام را از آخرین وضعیت ذخیره‌شده ادامه می‌دهد.</value>
+  </data>
+  <data name="DownloadSettingPage_DownloadFileExtension.Header" xml:space="preserve">
+    <value>پسوند فایل موقت</value>
+  </data>
+  <data name="DownloadSettingPage_DownloadFileExtension.Description" xml:space="preserve">
+    <value>پسوندی که تا زمان تکمیل دانلود به فایل اضافه می‌شود.</value>
+  </data>
+  <data name="DownloadSettingPage_FileExistPolicy.Header" xml:space="preserve">
+    <value>رفتار در صورت وجود فایل</value>
+  </data>
+  <data name="DownloadSettingPage_FileExistPolicy.Description" xml:space="preserve">
+    <value>مشخص می‌کند اگر فایل از قبل وجود داشته باشد، پیش از شروع دانلود چه عملی انجام شود.</value>
+  </data>
+  <data name="DownloadSettingPage_ClearPackageOnCompletionWithFailure.Header" xml:space="preserve">
+    <value>حذف داده‌های دانلود ناموفق</value>
+  </data>
+  <data name="DownloadSettingPage_ClearPackageOnCompletionWithFailure.Description" xml:space="preserve">
+    <value>در صورت شکست دانلود، فایل‌ها و داده‌های موقت مربوط به آن حذف می‌شوند.</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytesInfoBar.Message" xml:space="preserve">
+    <value>هنگامی که مصرف حافظه به این مقدار برسد، برنامه دانلود را به‌طور موقت متوقف کرده و داده‌های موجود در بافر را در فایل ذخیره می‌کند، سپس دانلود را ادامه می‌دهد. این تنظیم به‌ویژه در شرایط زیر مفید است: 1. دانلود فایل‌های حجیم در سیستم‌هایی با حافظه محدود 2. جلوگیری از بروز خطای کمبود حافظه (Out of Memory) هنگام دانلودهای موازی 3. بهینه‌سازی مصرف حافظه در دانلودهای طولانی‌مدت  سیستم‌های دارای ۴ گیگابایت RAM: ‎256 MB‎ (268,435,456 بایت)  سیستم‌های دارای ۸ گیگابایت RAM: ‎512 MB‎ (536,870,912 بایت)  سیستم‌های دارای ۱۶ گیگابایت RAM: ‎1 GB‎ (1,073,741,824 بایت)</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytesInfoBar.Title" xml:space="preserve">
+    <value>حداکثر مقدار حافظه (بر حسب بایت) را که برنامه مجاز است برای بافر کردن داده‌های دانلودشده اختصاص دهد.</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytesInfoBar2.Title" xml:space="preserve">
+    <value>انتخاب مقدار بسیار کم برای این گزینه می‌تواند به دلیل افزایش دفعات نوشتن روی دیسک، باعث کاهش عملکرد و سرعت دانلود شود</value>
+  </data>
+  <data name="DownloadSettingPage_Memory.Header" xml:space="preserve">
+    <value>حافظه</value>
+  </data>
+  <data name="DownloadSettingPage_Memory.Description" xml:space="preserve">
+    <value>مدیریت میزان حافظه مصرفی هنگام دانلود.</value>
+  </data>
+  <data name="DownloadSettingPage_ResetInfoBar.Title" xml:space="preserve">
+    <value>بازنشانی تنظیمات دانلود</value>
+  </data>
+  <data name="DownloadSettingPage_ResetInfoBar.Message" xml:space="preserve">
+    <value>تمام تنظیمات دانلود به مقادیر پیش‌فرض بازگردانده می‌شوند. این عمل قابل بازگشت نیست.</value>
+  </data>
+  <data name="DownloadSettingPage_ResetButton.Content" xml:space="preserve">
+    <value>بازنشانی به پیش‌فرض</value>
+  </data>
+  <data name="DownloadSettingPage_ResetConfirmDialog.Title" xml:space="preserve">
+    <value>بازنشانی تنظیمات دانلود</value>
+  </data>
+  <data name="DownloadSettingPage_ResetConfirmDialog.Message" xml:space="preserve">
+    <value>آیا مطمئن هستید که می‌خواهید تمام تنظیمات دانلود را به مقادیر پیش‌فرض بازنشانی کنید؟ این عمل قابل بازگشت نیست.</value>
+  </data>
+  <data name="DownloadSettingPage_ResetSuccessDialog.Title" xml:space="preserve">
+    <value>تنظیمات دانلود بازنشانی شد</value>
+  </data>
+  <data name="DownloadSettingPage_ResetSuccessDialog.Message" xml:space="preserve">
+    <value>تمام تنظیمات دانلود با موفقیت به مقادیر پیش‌فرض بازگردانده شدند.</value>
+  </data>
+  <data name="GeneralSettingPage_UseShellIcons.Header" xml:space="preserve">
+    <value>استفاده از آیکون‌های فایل ویندوز</value>
+  </data>
+  <data name="GeneralSettingPage_UseShellIcons.Description" xml:space="preserve">
+    <value>به‌جای آیکون‌های داخلی، آیکون‌های هر نوع فایل را که توسط ویندوز ارائه می‌شوند نمایش می‌دهد.</value>
+  </data>
+  <data name="DownloadStatus_None" xml:space="preserve">
+    <value>شروع نشده</value>
+  </data>
+  <data name="DownloadStatus_Created" xml:space="preserve">
+    <value>ایجاد شد</value>
+  </data>
+  <data name="DownloadStatus_Running" xml:space="preserve">
+    <value>درحال دانلود</value>
+  </data>
+  <data name="DownloadStatus_Stopped" xml:space="preserve">
+    <value>متوقف شد</value>
+  </data>
+  <data name="DownloadStatus_Paused" xml:space="preserve">
+    <value>مکث</value>
+  </data>
+  <data name="DownloadStatus_Completed" xml:space="preserve">
+    <value>تکمیل شده</value>
+  </data>
+  <data name="DownloadStatus_Failed" xml:space="preserve">
+    <value>با شکست مواجه شد</value>
+  </data>
+  <data name="PropertiesDialog.Header" xml:space="preserve">
+    <value>مشخصات فایل</value>
+  </data>
+  <data name="PropertiesDialog.PrimaryButtonContent" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="PropertiesDialog.SecondaryButtonContent" xml:space="preserve">
+    <value>بازکردن</value>
+  </data>
+  <data name="DeleteConfirmationDialog.Title" xml:space="preserve">
+    <value>حذف موارد</value>
+  </data>
+  <data name="DeleteConfirmationDialog.Message" xml:space="preserve">
+    <value>آیا از حذف موارد انتخاب‌شده اطمینان دارید؟</value>
+  </data>
+  <data name="DownloadWindow_URL.Header" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="DownloadWindow_SaveAs.Header" xml:space="preserve">
+    <value>ذخیره در</value>
+  </data>
+  <data name="DownloadWindow_DownloadLater.Content" xml:space="preserve">
+    <value>بعدا دانلود شود</value>
+  </data>
+  <data name="DownloadWindow_StartDownload.Content" xml:space="preserve">
+    <value>شروع دانلود</value>
+  </data>
+  <data name="DownloadWindow_CancelDownload.Content" xml:space="preserve">
+    <value>انصراف</value>
+  </data>
+  <data name="SpeedLimitDialog.Header" xml:space="preserve">
+    <value>محدود کننده سرعت دانلود</value>
+  </data>
+  <data name="SpeedLimitDialog.PrimaryButtonContent" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="SpeedLimitDialog.CloseButtonContent" xml:space="preserve">
+    <value>انصراف</value>
+  </data>
+  <data name="SpeedLimitDialog_TitleBlock.Text" xml:space="preserve">
+    <value>محدود کننده سرعت</value>
+  </data>
+  <data name="SpeedLimitDialog_DescriptionBlock.Text" xml:space="preserve">
+    <value>حداکثر سرعت دانلود را مشخص کنید. برای سرعت نامحدود از 0 استفاده کنید</value>
+  </data>
+  <data name="SpeedLimitDialog_NoLimit" xml:space="preserve">
+    <value>حداکثر سرعت</value>
+  </data>
+  <data name="MainWindow_NoDownload.Text" xml:space="preserve">
+    <value>دانلودی وجود ندارد</value>
+  </data>
+  <data name="MainWindow_NoDownloadDetail.Text" xml:space="preserve">
+    <value>روی دکمه آدرس کلیک کنید تا شروع کنید</value>
+  </data>
+  <data name="ScheduleWindow_ScheduleTab.Header" xml:space="preserve">
+    <value>زمان بندی</value>
+  </data>
+  <data name="ScheduleWindow_QueueFilesTab.Header" xml:space="preserve">
+    <value>فایل های موجود در صف</value>
+  </data>
+  <data name="ScheduleWindow_StartDownloadTime.Content" xml:space="preserve">
+    <value>زمان شروع دانلود</value>
+  </data>
+  <data name="ScheduleWindow_StopDownloadTime.Content" xml:space="preserve">
+    <value>قطع دانلود در زمان</value>
+  </data>
+  <data name="ScheduleWindow_RetryFailedFiles.Content" xml:space="preserve">
+    <value>تعداد دفعات سعی مجدد برای فایل‌هایی که با خطا مواجه می‌شوند</value>
+  </data>
+  <data name="ScheduleWindow_ClosePdmAfterDownloads.Content" xml:space="preserve">
+    <value>بعد از اتمام دانلودها PDM را ببند.</value>
+  </data>
+  <data name="ScheduleWindow_ShutdownAfterDownloads.Content" xml:space="preserve">
+    <value>بعد از اتمام دانلودها کامپیوتر را خاموش کن</value>
+  </data>
+  <data name="ScheduleWindow_ForceCloseApps.Content" xml:space="preserve">
+    <value>برنامه‌های در حال اجرا را مجبور به بستن کن</value>
+  </data>
+  <data name="ScheduleWindow_ConcurrentDownload.Header" xml:space="preserve">
+    <value>دانلود همزمان</value>
+  </data>
+  <data name="ScheduleWindow_StartButton.Content" xml:space="preserve">
+    <value>شروع</value>
+  </data>
+  <data name="ScheduleWindow_StopButton.Content" xml:space="preserve">
+    <value>توقف</value>
+  </data>
+  <data name="ScheduleWindow_CloseButton.Content" xml:space="preserve">
+    <value>بستن</value>
+  </data>
+  <data name="RemainingTime_Idle" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="RemainingTime_Calculating" xml:space="preserve">
+    <value>در حال محاسبه...</value>
+  </data>
+  <data name="RemainingTime_SecondsFormat" xml:space="preserve">
+    <value>{0} ثانیه باقی مانده</value>
+  </data>
+  <data name="RemainingTime_MinutesSecondsFormat" xml:space="preserve">
+    <value>{0} دقیقه و {1} ثانیه باقی مانده</value>
+  </data>
+  <data name="RemainingTime_HoursMinutesSecondsFormat" xml:space="preserve">
+    <value>{0} ساعت و {1} دقیقه و {2} ثانیه باقی مانده</value>
+  </data>
+  <data name="RemainingTime_DaysHoursMinutesSecondsFormat" xml:space="preserve">
+    <value>{0} روز و {1} ساعت و {2} دقیقه و {3} ثانیه باقی مانده</value>
+  </data>
+  <data name="CurrentDownloadWindow_TabDownloadStatus.Header" xml:space="preserve">
+    <value>وضعیت دانلود</value>
+  </data>
+  <data name="CurrentDownloadWindow_FileSize.Text" xml:space="preserve">
+    <value>حجم فایل</value>
+  </data>
+  <data name="CurrentDownloadWindow_Downloaded.Text" xml:space="preserve">
+    <value>دانلود شده</value>
+  </data>
+  <data name="CurrentDownloadWindow_TimeLeft.Text" xml:space="preserve">
+    <value>زمان باقی مانده</value>
+  </data>
+  <data name="CurrentDownloadWindow_ResumeCapability.Text" xml:space="preserve">
+    <value>قابلیت ادامه</value>
+  </data>
+  <data name="CurrentDownloadWindow_TransferRate.Text" xml:space="preserve">
+    <value>سرعت انتقال</value>
+  </data>
+  <data name="CurrentDownloadWindow_Pause.Label" xml:space="preserve">
+    <value>توقف</value>
+  </data>
+  <data name="CurrentDownloadWindow_Resume.Label" xml:space="preserve">
+    <value>ادامه</value>
+  </data>
+  <data name="CurrentDownloadWindow_Cancel.Label" xml:space="preserve">
+    <value>لغو</value>
+  </data>
+  <data name="CurrentDownloadWindow_Close.Label" xml:space="preserve">
+    <value>بستن</value>
+  </data>
+  <data name="ResumeCapabilitySupported" xml:space="preserve">
+    <value>بله</value>
+  </data>
+  <data name="ResumeCapabilityNotSupported" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="FlowDirection.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="ReFlowDirection.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="MainWindowAutoSuggestBox.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="AddLinkDialog.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="PropertiesDialog.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="SpeedLimitDialog.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="AddGroupLinkDialog.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+</root>

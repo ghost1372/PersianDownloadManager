@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window x:Class="PersianDownloadManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:dev="using:DevWinUI"
+        xmlns:local="using:PersianDownloadManager"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tv="using:WinUI.TableView"
+        Title="PersianDownloadManager"
+        mc:Ignorable="d">
+
+    <Grid x:Name="Root" x:Uid="FlowDirection">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TitleBar x:Name="AppTitleBar" Title="{x:Bind dev:ProcessInfoHelper.ProductNameDisplay}" Grid.ColumnSpan="2" FlowDirection="LeftToRight" Subtitle="{x:Bind dev:ProcessInfoHelper.VersionWithPrefixDev}">
+            <TitleBar.Resources>
+                <!--
+                    TitleBar.Content uses Center alignment by default. Override to
+                    Stretch so the AutoSuggestBox grows with the title bar.
+                -->
+                <HorizontalAlignment x:Key="TitleBarContentHorizontalAlignment">Stretch</HorizontalAlignment>
+            </TitleBar.Resources>
+            <TitleBar.IconSource>
+                <ImageIconSource ImageSource="ms-appx:///Assets/AppIcon.png" />
+            </TitleBar.IconSource>
+            <AutoSuggestBox x:Name="HeaderAutoSuggestBox" x:Uid="MainWindowAutoSuggestBox" MaxWidth="380" HorizontalAlignment="Stretch" VerticalAlignment="Center" QueryIcon="Find" QuerySubmitted="OnQuerySubmitted" TextChanged="OnTextChanged">
+                <AutoSuggestBox.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="F" Invoked="KeyboardAccelerator_Invoked" Modifiers="Control" />
+                </AutoSuggestBox.KeyboardAccelerators>
+            </AutoSuggestBox>
+        </TitleBar>
+        <MenuBar Grid.Row="1" Grid.ColumnSpan="2">
+            <MenuBarItem x:Uid="MenuBarFile">
+                <MenuFlyoutItem x:Uid="MenuBarFileAdd" Click="OnMenuItemClick" Tag="Add">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE710;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem x:Uid="MenuBarFileAddGroup" Click="OnMenuItemClick" Tag="AddGroup">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE82E;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem x:Uid="MenuBarFileAddFromClipboard" Click="OnMenuItemClick" Tag="AddClipboard">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xED0E;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutSubItem x:Uid="MenuBarFileImport">
+                    <MenuFlyoutSubItem.Icon>
+                        <FontIcon Glyph="&#xE8B5;" />
+                    </MenuFlyoutSubItem.Icon>
+                    <MenuFlyoutItem x:Uid="MenuBarFileImportPDM" Click="OnMenuItemClick" Tag="ImportPDM">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE7B8;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem x:Uid="MenuBarFileImportText" Click="OnMenuItemClick" Tag="ImportFile">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE8A5;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                </MenuFlyoutSubItem>
+                <MenuFlyoutSubItem x:Uid="MenuBarFileExport">
+                    <MenuFlyoutSubItem.Icon>
+                        <FontIcon Glyph="&#xEDE1;" />
+                    </MenuFlyoutSubItem.Icon>
+                    <MenuFlyoutItem x:Uid="MenuBarFileExportPDM" Click="OnMenuItemClick" Tag="ExportPDM">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE7B8;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem x:Uid="MenuBarFileExportText" Click="OnMenuItemClick" Tag="ExportFile">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xE8A5;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                </MenuFlyoutSubItem>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem x:Uid="MenuBarFileExit" Click="OnMenuItemClick" Tag="Exit">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE711;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+            </MenuBarItem>
+            <MenuBarItem x:Uid="MenuBarDownload">
+                <MenuFlyoutItem x:Uid="MenuBarDownloadPauseAll" Click="OnMenuItemClick" IsEnabled="{x:Bind ViewModel.CanPauseAll, Mode=OneWay}" Tag="PauseAll">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xF2D9;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem x:Uid="MenuBarDownloadDeleteFinished" Click="OnMenuItemClick" IsEnabled="{x:Bind ViewModel.CanDeleteFinished, Mode=OneWay}" Tag="DeleteFinished">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE74D;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem x:Uid="MenuBarDownloadSchedule" Click="OnMenuItemClick" Tag="DownloadSchedule">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE917;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutSubItem x:Uid="MenuBarDownloadSpeedLimit">
+                    <MenuFlyoutSubItem.Icon>
+                        <FontIcon Glyph="&#xEA79;" />
+                    </MenuFlyoutSubItem.Icon>
+                    <RadioMenuFlyoutItem x:Uid="MenuBarDownloadSpeedLimitActive" Click="OnMenuItemClick" GroupName="SpeedLimit" Tag="SpeedLimitActive">
+                        <RadioMenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xEC48;" />
+                        </RadioMenuFlyoutItem.Icon>
+                    </RadioMenuFlyoutItem>
+                    <RadioMenuFlyoutItem x:Uid="MenuBarDownloadSpeedLimitDeActive" Click="OnMenuItemClick" GroupName="SpeedLimit" IsChecked="True" Tag="SpeedLimitDeActive">
+                        <RadioMenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xEC4A;" />
+                        </RadioMenuFlyoutItem.Icon>
+                    </RadioMenuFlyoutItem>
+                    <MenuFlyoutSeparator />
+                    <MenuFlyoutItem x:Uid="MenuBarDownloadSpeedLimitSettings" Click="OnMenuItemClick" Tag="SpeedLimitSettings">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon Glyph="&#xF42F;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                </MenuFlyoutSubItem>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem x:Uid="MenuBarDownloadSettings" Click="OnMenuItemClick" Tag="Settings">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE713;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+            </MenuBarItem>
+            <MenuBarItem x:Uid="MenuBarAbout">
+                <MenuFlyoutItem x:Uid="MenuBarAboutUs" Click="OnMenuItemClick" Tag="About">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE946;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem x:Uid="MenuBarAboutUpdate" Click="OnMenuItemClick" Tag="Update">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xECC5;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem x:Uid="MenuBarAboutGithub" Click="OnMenuItemClick" Tag="Github">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE943;" />
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+            </MenuBarItem>
+        </MenuBar>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Background="{ThemeResource LayerOnMicaBaseAltFillColorDefaultBrush}" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="0,1,0,1">
+            <CommandBar HorizontalAlignment="Left" DefaultLabelPosition="Right" OverflowButtonVisibility="Collapsed">
+                <AppBarButton x:Uid="ToolBarAdd" Click="OnCommandBarClick" Tag="Add">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE710;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="ToolBarResume" Click="OnCommandBarClick" IsEnabled="{x:Bind ViewModel.CanResume, Mode=OneWay}" Tag="Resume">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE896;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="ToolBarStop" Click="OnCommandBarClick" IsEnabled="{x:Bind ViewModel.CanStop, Mode=OneWay}" Tag="Stop">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE71A;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarSeparator />
+                <AppBarButton x:Uid="ToolBarDelete" Click="OnCommandBarClick" IsEnabled="{x:Bind ViewModel.CanDelete, Mode=OneWay}" Tag="Delete">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE74D;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="ToolBarDeleteFinished" Click="OnCommandBarClick" IsEnabled="{x:Bind ViewModel.CanDeleteFinished, Mode=OneWay}" Tag="DeleteFinished">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE74D;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarSeparator />
+                <AppBarButton x:Uid="ToolBarSettings" Click="OnCommandBarClick" Tag="Settings">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE713;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="ToolBarSchedule" Click="OnCommandBarClick" Tag="Schedule">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE917;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="ToolBarStartQueue" Click="OnCommandBarClick" Tag="StartQueue">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xECC5;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="ToolBarStopQueue" Click="OnCommandBarClick" Tag="StopQueue">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE916;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar>
+        </StackPanel>
+        <dev:SidebarView x:Name="MainSidebarView" Grid.Row="3" HorizontalAlignment="Left" ItemInvoked="SidebarView_ItemInvoked" MenuItemsSource="{x:Bind SidebarViewItems, Mode=OneWay}" />
+        <tv:TableView x:Name="MainTableView" Grid.Row="3" Grid.Column="1" AllowDrop="True" AutoGenerateColumns="False" CanDragItems="True" CanReorderItems="True" CornerRadius="0" IsReadOnly="True" ItemsSource="{x:Bind ViewModel.Downloads, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectionUnit="Row" ShowDragRectangle="True">
+            <tv:TableView.Columns>
+                <tv:TableViewTextColumn Binding="{Binding Index}" CanFilter="False" Header="#" />
+                <tv:TableViewTemplateColumn x:Uid="TvFileName" Width="450" MinWidth="200" CanFilter="True" CanSort="True">
+                    <tv:TableViewTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="5,0" Orientation="Horizontal" Spacing="5">
+                                <Image Width="24" Height="24" Source="{Binding Icon}" />
+                                <TextBlock VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding FileName}" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </tv:TableViewTemplateColumn.CellTemplate>
+                </tv:TableViewTemplateColumn>
+                <tv:TableViewTextColumn x:Uid="TvFileSize" Width="80" Binding="{Binding Size}" SortMemberPath="TotalBytes" />
+                <tv:TableViewTemplateColumn x:Uid="TvStatus" MinWidth="200" CanFilter="True" CanSort="True" SortMemberPath="Status">
+                    <tv:TableViewTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="10,0" Spacing="5">
+                                <TextBlock FontSize="12" Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding StatusTextWithPercent}" />
+                                <ProgressBar ShowError="{Binding ShowError}" Visibility="{Binding ShowProgressBar, Converter={StaticResource BoolToVisibilityConverter}}" Value="{Binding Progress}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </tv:TableViewTemplateColumn.CellTemplate>
+                </tv:TableViewTemplateColumn>
+                <tv:TableViewTextColumn x:Uid="TvRemainingTime" Width="150" Binding="{Binding RemainingTime}" />
+                <tv:TableViewTextColumn x:Uid="TvSpeed" Width="100" Binding="{Binding Speed}" />
+                <tv:TableViewCheckBoxColumn x:Uid="TvQueue" Width="80" Binding="{Binding IsQueue}" />
+                <tv:TableViewTextColumn x:Uid="TvAddedDate" Width="150" Binding="{Binding AddedDate}" />
+                <tv:TableViewTextColumn x:Uid="TvLastDate" Width="170" Binding="{Binding LastDate}" />
+                <tv:TableViewTextColumn x:Uid="TvSaveLocation" MinWidth="200" Binding="{Binding FilePath}" />
+            </tv:TableView.Columns>
+            <tv:TableView.RowContextFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem x:Uid="ContextMenuOpen" Click="OnContextMenuItemClick" IsEnabled="{Binding CanOpenFile}" Tag="OpenFile">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/External.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem x:Uid="ContextMenuOpenFolder" Click="OnContextMenuItemClick" Tag="OpenFolder">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/Folder.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+
+                    <MenuFlyoutSeparator />
+                    <MenuFlyoutItem x:Uid="ContextMenuReDownload" Click="OnContextMenuItemClick" IsEnabled="{Binding CanReDownload}" Tag="ReDownload">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/Download.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem x:Uid="ContextMenuResumeDownload" Click="OnContextMenuItemClick" IsEnabled="{Binding CanResume}" Tag="Resume">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/Resume.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem x:Uid="ContextMenuStopDownload" Click="OnContextMenuItemClick" IsEnabled="{Binding CanStop}" Tag="Stop">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/Stop.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutSeparator />
+                    <MenuFlyoutItem x:Uid="ContextMenuAddQueue" Click="OnContextMenuItemClick" IsEnabled="{Binding IsQueue, Converter={StaticResource BoolNegationConverter}}" Tag="AddQueue">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/Queue.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem x:Uid="ContextMenuRemoveQueue" Click="OnContextMenuItemClick" IsEnabled="{Binding IsQueue}" Tag="RemoveQueue">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/Delete.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutSeparator />
+                    <MenuFlyoutItem x:Uid="ContextMenuDelete" Click="OnContextMenuItemClick" Tag="Delete">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/Delete.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutSeparator />
+                    <MenuFlyoutItem x:Uid="ContextMenuProperties" Click="OnContextMenuItemClick" Tag="Properties">
+                        <MenuFlyoutItem.Icon>
+                            <ImageIcon Source="ms-appx:///Assets/Fluent/Info.png" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                </MenuFlyout>
+            </tv:TableView.RowContextFlyout>
+        </tv:TableView>
+        <Grid Grid.Row="3" Grid.Column="1" Visibility="{x:Bind ViewModel.IsEmpty, Mode=OneWay}">
+            <Rectangle Margin="50,80,50,50" RadiusX="8" RadiusY="8" Stroke="{ThemeResource ControlSolidFillColorDefaultBrush}" StrokeDashArray="10" />
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel>
+                    <Viewbox Width="72" Height="72">
+                        <dev:ThemedIcon Style="{StaticResource App.ThemedIcons.Download}" />
+                    </Viewbox>
+                    <TextBlock x:Uid="MainWindow_NoDownload" Margin="0,16,0,0" HorizontalAlignment="Center" FontSize="24" Style="{ThemeResource TitleTextBlockStyle}" />
+                    <TextBlock x:Uid="MainWindow_NoDownloadDetail" Margin="0,8,0,0" FontWeight="Normal" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Style="{ThemeResource BaseTextBlockStyle}" TextAlignment="Center" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

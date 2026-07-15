@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window x:Class="PersianDownloadManager.Views.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:dev="using:DevWinUI"
+        xmlns:local="using:PersianDownloadManager.Common"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d">
+    <Grid x:Uid="FlowDirection" Padding="20" Background="{ThemeResource LayerOnMicaBaseAltFillColorDefaultBrush}" ColumnSpacing="10" PointerPressed="Grid_PointerPressed">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Spacing="10">
+            <TextBlock x:Uid="AboutWindow" Style="{ThemeResource TitleTextBlockStyle}" />
+            <TextBlock Foreground="{ThemeResource TextFillColorSecondaryBrush}" Style="{ThemeResource SubtitleTextBlockStyle}" Text="{x:Bind dev:ProcessInfoHelper.VersionWithPrefix}" />
+        </StackPanel>
+
+        <Image Source="ms-appx:///Assets/AppIcon.png" />
+        <TextBlock x:Uid="AboutWindowDeveloper" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,20,0,0" VerticalAlignment="Bottom" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Style="{ThemeResource BaseTextBlockStyle}" />
+
+    </Grid>
+
+</Window>

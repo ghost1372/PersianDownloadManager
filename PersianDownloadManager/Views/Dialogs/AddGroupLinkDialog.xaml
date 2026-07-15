@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dev:ContentDialogWindow x:Class="PersianDownloadManager.Views.AddGroupLinkDialog"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                         xmlns:dev="using:DevWinUI"
+                         xmlns:local="using:PersianDownloadManager.Views"
+                         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                         x:Uid="AddGroupLinkDialog"
+                         MaxWidth="800"
+                         Background="{ThemeResource LayerOnAcrylicFillColorDefaultBrush}"
+                         CanResize="False"
+                         CloseButtonClick="ContentDialogWindow_CloseButtonClick"
+                         DefaultButton="Primary"
+                         PrimaryButtonClick="ContentDialogWindow_PrimaryButtonClick"
+                         mc:Ignorable="d">
+    <dev:ContentDialogWindow.SystemBackdrop>
+        <DesktopAcrylicBackdrop />
+    </dev:ContentDialogWindow.SystemBackdrop>
+
+    <StackPanel Padding="0,20,0,0" Spacing="10">
+        <InfoBar x:Uid="AddGroupLinkDialogInfoBar" IsClosable="False" IsOpen="True" Severity="Informational" />
+        <TextBox x:Name="TxtUrl" x:Uid="AddGroupLinkDialogUrl" TextChanged="TxtUrl_TextChanged" />
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <NumberBox x:Name="NBFrom" x:Uid="AddGroupLinkDialogFromNumber" VerticalAlignment="Center" Maximum="999999999" Minimum="0" SpinButtonPlacementMode="Inline" ValueChanged="NBFrom_ValueChanged" Value="0" />
+            <NumberBox x:Name="NBTo" x:Uid="AddGroupLinkDialogToNumber" VerticalAlignment="Center" Maximum="999999999" Minimum="0" SpinButtonPlacementMode="Inline" ValueChanged="NBTo_ValueChanged" Value="1" />
+            <NumberBox x:Name="NBSize" x:Uid="AddGroupLinkDialogSizeNumber" HorizontalAlignment="Right" Maximum="10" Minimum="1" SpinButtonPlacementMode="Inline" ValueChanged="NBSize_ValueChanged" Value="1" />
+        </StackPanel>
+        <TextBox x:Name="TxtFirstFile" x:Uid="AddGroupLinkDialogFirstLink" IsReadOnly="True" Style="{ThemeResource BaseTextBlockStyle}" />
+        <TextBox x:Name="TxtSecondFile" x:Uid="AddGroupLinkDialogSecondLink" IsReadOnly="True" Style="{ThemeResource BaseTextBlockStyle}" />
+        <TextBox x:Name="TxtLastFile" x:Uid="AddGroupLinkDialogLastLink" IsReadOnly="True" Style="{ThemeResource BaseTextBlockStyle}" />
+    </StackPanel>
+</dev:ContentDialogWindow>

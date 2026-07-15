@@ -1,0 +1,10 @@
+﻿global using DevWinUI;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.UI.Xaml;
+global using Microsoft.UI.Xaml.Controls;
+global using PersianDownloadManager.Common;
+global using PersianDownloadManager.Models;
+global using PersianDownloadManager.ViewModels;
+global using PersianDownloadManager.Views;
+global using static PersianDownloadManager.Common.AppHelper;
+global using static PersianDownloadManager.Common.LoggerSetup;

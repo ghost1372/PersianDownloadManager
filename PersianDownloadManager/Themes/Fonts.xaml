@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="IRANSansXFont">ms-appx:///Assets/Fonts/IRANSansX-Regular.ttf#IRANSansX</FontFamily>
+    <FontFamily x:Key="IRANYekanFont">ms-appx:///Assets/Fonts/IRANYekanRegular.ttf#IRANYekan</FontFamily>
+    <FontFamily x:Key="VazirmatnFont">ms-appx:///Assets/Fonts/Vazirmatn-Regular.ttf#Vazirmatn</FontFamily>
+
+    <FontFamily x:Key="PersianDownloadManagerFont">ms-appx:///Assets/Fonts/Vazirmatn-Regular.ttf#Vazirmatn</FontFamily>
+
+</ResourceDictionary>

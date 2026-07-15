@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainWindowSetting" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ToolBarAdd.Label" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ToolBarDelete.Label" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ToolBarDeleteFinished.Label" xml:space="preserve">
+    <value>Delete Completed</value>
+  </data>
+  <data name="ToolBarResume.Label" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="ToolBarSchedule.Label" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="ToolBarSettings.Label" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ToolBarStartQueue.Label" xml:space="preserve">
+    <value>Start Queue</value>
+  </data>
+  <data name="ToolBarStopQueue.Label" xml:space="preserve">
+    <value>Stop Queue</value>
+  </data>
+  <data name="SidebarGroupAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="SidebarGroupAllDownload" xml:space="preserve">
+    <value>All Downloads</value>
+  </data>
+  <data name="SidebarGroupApps" xml:space="preserve">
+    <value>Applications</value>
+  </data>
+  <data name="SidebarGroupArchives" xml:space="preserve">
+    <value>Archives</value>
+  </data>
+  <data name="SidebarGroupDocuments" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="SidebarGroupFinishedDownload" xml:space="preserve">
+    <value>Finished Downloads</value>
+  </data>
+  <data name="SidebarGroupMedia" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="SidebarGroupMusics" xml:space="preserve">
+    <value>Musics</value>
+  </data>
+  <data name="SidebarGroupUnFinishedDownload" xml:space="preserve">
+    <value>UnFinished Downloads</value>
+  </data>
+  <data name="TrayIconAboutItem" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="TrayIconExitItem" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="TrayIconOpenItem" xml:space="preserve">
+    <value>Open Persian Download Manager</value>
+  </data>
+  <data name="TrayIconTooltip" xml:space="preserve">
+    <value>Persian Download Manager</value>
+  </data>
+  <data name="ToolBarStop.Label" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="MenuBarFile.Title" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="MenuBarFileAdd.Text" xml:space="preserve">
+    <value>Add New Download</value>
+  </data>
+  <data name="MenuBarFileAddGroup.Text" xml:space="preserve">
+    <value>Add Group Download</value>
+  </data>
+  <data name="MenuBarFileAddFromClipboard.Text" xml:space="preserve">
+    <value>Add Links From Clipboard</value>
+  </data>
+  <data name="MenuBarFileImport.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="MenuBarFileExport.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="MenuBarFileImportPDM.Text" xml:space="preserve">
+    <value>From PDM File</value>
+  </data>
+  <data name="MenuBarFileImportText.Text" xml:space="preserve">
+    <value>From Text File</value>
+  </data>
+  <data name="MenuBarFileExportPDM.Text" xml:space="preserve">
+    <value>To PDM File</value>
+  </data>
+  <data name="MenuBarFileExportText.Text" xml:space="preserve">
+    <value>To Text File</value>
+  </data>
+  <data name="MenuBarFileExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MenuBarDownload.Title" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="MenuBarDownloadPauseAll.Text" xml:space="preserve">
+    <value>Pause All</value>
+  </data>
+  <data name="MenuBarDownloadStopAll.Text" xml:space="preserve">
+    <value>Stop All</value>
+  </data>
+  <data name="MenuBarDownloadDeleteFinished.Text" xml:space="preserve">
+    <value>Delete Completed</value>
+  </data>
+  <data name="MenuBarDownloadSchedule.Text" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="MenuBarDownloadSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MenuBarDownloadSpeedLimit.Text" xml:space="preserve">
+    <value>Limit Speed</value>
+  </data>
+  <data name="MenuBarDownloadSpeedLimitActive.Text" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="MenuBarDownloadSpeedLimitDeActive.Text" xml:space="preserve">
+    <value>DeAvtice</value>
+  </data>
+  <data name="MenuBarDownloadSpeedLimitSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MenuBarAbout.Title" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="MenuBarAboutUs.Text" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="MenuBarAboutGithub.Text" xml:space="preserve">
+    <value>Github</value>
+  </data>
+  <data name="MenuBarAboutUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="MainWindowAutoSuggestBox.PlaceholderText" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="SettingsPageGeneral.Header" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SettingsPageDownload.Header" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="SettingsPageTheme.Header" xml:space="preserve">
+    <value>Appearance &amp; Behavior</value>
+  </data>
+  <data name="SettingsPageUpdate.Header" xml:space="preserve">
+    <value>Update App</value>
+  </data>
+  <data name="SettingsPageAbout.Header" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="SettingsPageGeneral.Description" xml:space="preserve">
+    <value>Change Application Settings</value>
+  </data>
+  <data name="SettingsPageAbout.Description" xml:space="preserve">
+    <value>About Persian Download Manager and Developer</value>
+  </data>
+  <data name="SettingsPageDownload.Description" xml:space="preserve">
+    <value>Config Downloader Options for Better Result</value>
+  </data>
+  <data name="SettingsPageTheme.Description" xml:space="preserve">
+    <value>Explore the different ways to customize the appearance and behavior of your app. You can change the material, theme, accent, and more options to suit your style and preference.</value>
+  </data>
+  <data name="SettingsPageUpdate.Description" xml:space="preserve">
+    <value>Check for and download new versions</value>
+  </data>
+  <data name="SettingsPageHeader" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="AboutUsSettingPage_RelatedLink.Text" xml:space="preserve">
+    <value>Related Links</value>
+  </data>
+  <data name="AboutUsSettingPage_SourceCode.Content" xml:space="preserve">
+    <value>Source Code</value>
+  </data>
+  <data name="AboutUsSettingPage_ReleaseNote.Content" xml:space="preserve">
+    <value>Release Note</value>
+  </data>
+  <data name="AboutUsSettingPage_About.Header" xml:space="preserve">
+    <value>Persian Download Manager</value>
+  </data>
+  <data name="AboutUsSettingPage_About.Description" xml:space="preserve">
+    <value>Persian Download Manager Fast and Beautiful</value>
+  </data>
+  <data name="AppUpdateSettingPage_LastUpdate.Text" xml:space="preserve">
+    <value>Last Update Check</value>
+  </data>
+  <data name="AppUpdateSettingPage_CheckForUpdate.Content" xml:space="preserve">
+    <value>Check or new version</value>
+  </data>
+  <data name="AppUpdateSettingPage_ReleaseNote.Content" xml:space="preserve">
+    <value>Release notes</value>
+  </data>
+  <data name="AppUpdateSettingPage_DownloadUpdate.Content" xml:space="preserve">
+    <value>Download Update</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_CurrentVersion" xml:space="preserve">
+    <value>Current Version</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_CheckVersion" xml:space="preserve">
+    <value>Check for new version</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_FoundVersion" xml:space="preserve">
+    <value>We have found a new version {0}, created on {1} and released on {2}.</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_FoundPreReleaseVersion" xml:space="preserve">
+    <value>We have found a new preview version {0}, created on {1} and released on {2}.</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_NoNewVersion" xml:space="preserve">
+    <value>You are using the latest version.</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_ErrorConnection" xml:space="preserve">
+    <value>Connection Error</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_ReleaseNoteTitle" xml:space="preserve">
+    <value>Release Notes</value>
+  </data>
+  <data name="AppUpdateSettingViewModel_ReleaseNoteClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Main_FlowDirection.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="ThemeSettingPage_Theme.Header" xml:space="preserve">
+    <value>App Theme</value>
+  </data>
+  <data name="ThemeSettingPage_Theme.Description" xml:space="preserve">
+    <value>Select the theme that suits your mood and preference. You can choose from dark, light, or system themes.</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeSystem.Content" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdrop.Header" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdrop.Description" xml:space="preserve">
+    <value>Change the appearance of the backdrop material behind your app. You can choose from mica, acrylic.</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdropMica.Content" xml:space="preserve">
+    <value>Mica</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdropMicaAlt.Content" xml:space="preserve">
+    <value>Mica Alt</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdropAcrylic.Content" xml:space="preserve">
+    <value>Acrylic</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeBackdropAcrylicThin.Content" xml:space="preserve">
+    <value>Acrylic Thin</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeAccentColor.Header" xml:space="preserve">
+    <value>Accent Color</value>
+  </data>
+  <data name="ThemeSettingPage_ThemeAccentColor.Description" xml:space="preserve">
+    <value>Sync your app’s color with your Windows accent color. You can open the Windows accent color setting by clicking this card.</value>
+  </data>
+  <data name="GeneralSettingPage_UIFont.Header" xml:space="preserve">
+    <value>User Interface Font</value>
+  </data>
+  <data name="GeneralSettingPage_UIFont.Description" xml:space="preserve">
+    <value>Change interface font to your preferred font.</value>
+  </data>
+  <data name="GeneralSettingPage_Language.Header" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="GeneralSettingPage_Language.Description" xml:space="preserve">
+    <value>Change the language used in the application interface.</value>
+  </data>
+  <data name="GeneralSettingPage_Debug.Header" xml:space="preserve">
+    <value>Diagnostics &amp; feedback (Restart Required)</value>
+  </data>
+  <data name="GeneralSettingPage_Debug.Description" xml:space="preserve">
+    <value>Help us improve this app by sharing optional diagnostics data to inform bug fixes, performance, and feature enhancements</value>
+  </data>
+  <data name="RestartNotificationText.Subtitle" xml:space="preserve">
+    <value>The application needs to be restarted in order to apply these settings, would you like to restart the app?</value>
+  </data>
+  <data name="YesButton.Content" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="NoButton.Content" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="GeneralSettingPage_AutoStartup.Header" xml:space="preserve">
+    <value>Run at startup</value>
+  </data>
+  <data name="GeneralSettingPage_AutoStartup.Description" xml:space="preserve">
+    <value>Automatically launch app when you log in to Windows</value>
+  </data>
+  <data name="AboutWindow.Text" xml:space="preserve">
+    <value>Persian Download Manager</value>
+  </data>
+  <data name="AboutWindowDeveloper.Text" xml:space="preserve">
+    <value>Developed By Mahdi Hosseini</value>
+  </data>
+  <data name="TvFileName.Header" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="TvFileSize.Header" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="TvStatus.Header" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="TvRemainingTime.Header" xml:space="preserve">
+    <value>Remaining Time</value>
+  </data>
+  <data name="TvSpeed.Header" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="TvQueue.Header" xml:space="preserve">
+    <value>Queue</value>
+  </data>
+  <data name="TvLastDate.Header" xml:space="preserve">
+    <value>Last Date Download</value>
+  </data>
+  <data name="TvAddedDate.Header" xml:space="preserve">
+    <value>Added Date</value>
+  </data>
+  <data name="TvSaveLocation.Header" xml:space="preserve">
+    <value>Save Location</value>
+  </data>
+  <data name="ContextMenuOpen.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="ContextMenuOpenFolder.Text" xml:space="preserve">
+    <value>Open Folder</value>
+  </data>
+  <data name="ContextMenuReDownload.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="ContextMenuResumeDownload.Text" xml:space="preserve">
+    <value>Resume Download</value>
+  </data>
+  <data name="ContextMenuStopDownload.Text" xml:space="preserve">
+    <value>Stop Download</value>
+  </data>
+  <data name="ContextMenuAddQueue.Text" xml:space="preserve">
+    <value>Add To Main Queue</value>
+  </data>
+  <data name="ContextMenuRemoveQueue.Text" xml:space="preserve">
+    <value>Remove From Main Queue</value>
+  </data>
+  <data name="ContextMenuDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ContextMenuProperties.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="AddLinkDialogText.Header" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="AddLinkDialogText.PlaceholderText" xml:space="preserve">
+    <value>https://localhost.com/Test.jpg</value>
+  </data>
+  <data name="AddLinkDialog.PrimaryButtonContent" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="AddLinkDialog.CloseButtonContent" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="AddLinkDialog.Header" xml:space="preserve">
+    <value>Enter a new Url for Download</value>
+  </data>
+  <data name="AddLinkDialogMessageBoxTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="AddLinkDialogMessageBoxEmptyMessage" xml:space="preserve">
+    <value>Url can not be empty!</value>
+  </data>
+  <data name="AddLinkDialogMessageBoxNotValidMessage" xml:space="preserve">
+    <value>Url is not valid!</value>
+  </data>
+  <data name="AddGroupLinkDialogInfoBar.Message" xml:space="preserve">
+    <value>You can enter a sequence of consecutively numbered file names into the program. Use an asterisk (`*`) as a wildcard in place of the sequential numbers. For example  https://www.localhost.com/picture/img*.jpg</value>
+  </data>
+  <data name="AddGroupLinkDialogFromNumber.Header" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="AddGroupLinkDialogToNumber.Header" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="AddGroupLinkDialogSizeNumber.Header" xml:space="preserve">
+    <value>Sequence Size</value>
+  </data>
+  <data name="AddGroupLinkDialogFirstLink.Header" xml:space="preserve">
+    <value>First File</value>
+  </data>
+  <data name="AddGroupLinkDialogSecondLink.Header" xml:space="preserve">
+    <value>Second File</value>
+  </data>
+  <data name="AddGroupLinkDialogLastLink.Header" xml:space="preserve">
+    <value>Last File</value>
+  </data>
+  <data name="AddGroupLinkDialogUrl.Header" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="AddGroupLinkDialogUrl.PlaceholderText" xml:space="preserve">
+    <value>https://localhost.com/*.jpg</value>
+  </data>
+  <data name="AddGroupLinkDialog.Header" xml:space="preserve">
+    <value>Group Download</value>
+  </data>
+  <data name="AddGroupLinkDialog.PrimaryButtonContent" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="AddGroupLinkDialog.CloseButtonContent" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DownloadSettingPage_SaveLocation.Header" xml:space="preserve">
+    <value>Download Location</value>
+  </data>
+  <data name="DownloadSettingPage_SaveLocation.Description" xml:space="preserve">
+    <value>Choose the default folder where downloaded files will be saved.</value>
+  </data>
+  <data name="DownloadSettingPage_Browse.Content" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="DownloadSettingPage_Performance.Header" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="DownloadSettingPage_Performance.Description" xml:space="preserve">
+    <value>Optimize download speed and chunking behavior.</value>
+  </data>
+  <data name="DownloadSettingPage_BufferBlockSize.Header" xml:space="preserve">
+    <value>Buffer Block Size</value>
+  </data>
+  <data name="DownloadSettingPage_BufferBlockSize.Description" xml:space="preserve">
+    <value>Size of each downloaded data block. Larger values may improve throughput but use more memory.</value>
+  </data>
+  <data name="DownloadSettingPage_ChunkCount.Header" xml:space="preserve">
+    <value>Download Chunks</value>
+  </data>
+  <data name="DownloadSettingPage_ChunkCount.Description" xml:space="preserve">
+    <value>Maximum number of file parts to split a download into.</value>
+  </data>
+  <data name="DownloadSettingPage_MinimumSizeOfChunking.Header" xml:space="preserve">
+    <value>Minimum File Size for Chunking</value>
+  </data>
+  <data name="DownloadSettingPage_MinimumSizeOfChunking.Description" xml:space="preserve">
+    <value>Files smaller than this size are downloaded as a single stream.</value>
+  </data>
+  <data name="DownloadSettingPage_MinimumChunkSize.Header" xml:space="preserve">
+    <value>Minimum Chunk Size</value>
+  </data>
+  <data name="DownloadSettingPage_MinimumChunkSize.Description" xml:space="preserve">
+    <value>Prevents chunks from becoming too small by reducing the chunk count when necessary.</value>
+  </data>
+  <data name="DownloadSettingPage_ParallelDownload.Header" xml:space="preserve">
+    <value>Parallel Downloads</value>
+  </data>
+  <data name="DownloadSettingPage_ParallelDownload.Description" xml:space="preserve">
+    <value>Download multiple file chunks simultaneously when supported by the server.</value>
+  </data>
+  <data name="DownloadSettingPage_ParallelCount.Header" xml:space="preserve">
+    <value>Parallel Connections</value>
+  </data>
+  <data name="DownloadSettingPage_ParallelCount.Description" xml:space="preserve">
+    <value>Maximum number of chunks to download concurrently. If ParallelCount is less than or equal to 0, then ParallelCount is equal to ChunkCount.</value>
+  </data>
+  <data name="DownloadSettingPage_Network.Header" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="DownloadSettingPage_Network.Description" xml:space="preserve">
+    <value>Configure bandwidth limits, retries, and network timeouts.</value>
+  </data>
+  <data name="DownloadSettingPage_Resume.Header" xml:space="preserve">
+    <value>Resume &amp; Files</value>
+  </data>
+  <data name="DownloadSettingPage_Resume.Description" xml:space="preserve">
+    <value>Manage temporary files, resume support, and existing file behavior.</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumBytesPerSecond.Header" xml:space="preserve">
+    <value>Speed Limit</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumBytesPerSecond.Description" xml:space="preserve">
+    <value>Maximum download speed in bytes per second. Set to 0 for unlimited speed.</value>
+  </data>
+  <data name="DownloadSettingPage_MaxTryAgainOnFailure.Header" xml:space="preserve">
+    <value>Retry Attempts</value>
+  </data>
+  <data name="DownloadSettingPage_MaxTryAgainOnFailure.Description" xml:space="preserve">
+    <value>Maximum number of retry attempts after a failed download.</value>
+  </data>
+  <data name="DownloadSettingPage_BlockTimeout.Header" xml:space="preserve">
+    <value>Block Timeout</value>
+  </data>
+  <data name="DownloadSettingPage_BlockTimeout.Description" xml:space="preserve">
+    <value>Maximum time to wait for each downloaded data block before timing out. (Milisecond)</value>
+  </data>
+  <data name="DownloadSettingPage_HttpClientTimeout.Header" xml:space="preserve">
+    <value>HTTP Request Timeout</value>
+  </data>
+  <data name="DownloadSettingPage_HttpClientTimeout.Description" xml:space="preserve">
+    <value>Maximum duration for an individual HTTP request before it is canceled. (Milisecond)</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytes.Header" xml:space="preserve">
+    <value>Memory Buffer Limit</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytes.Description" xml:space="preserve">
+    <value>Maximum memory used for buffering downloads before data is written to disk. Set to 0 for unlimited.</value>
+  </data>
+  <data name="DownloadSettingPage_EnableAutoResumeDownload.Header" xml:space="preserve">
+    <value>Resume Interrupted Downloads</value>
+  </data>
+  <data name="DownloadSettingPage_EnableAutoResumeDownload.Description" xml:space="preserve">
+    <value>Continue downloads from previously saved progress whenever possible.</value>
+  </data>
+  <data name="DownloadSettingPage_DownloadFileExtension.Header" xml:space="preserve">
+    <value>Temporary File Extension</value>
+  </data>
+  <data name="DownloadSettingPage_DownloadFileExtension.Description" xml:space="preserve">
+    <value>Extension used for files while they are still downloading.</value>
+  </data>
+  <data name="DownloadSettingPage_FileExistPolicy.Header" xml:space="preserve">
+    <value>Existing File Behavior</value>
+  </data>
+  <data name="DownloadSettingPage_FileExistPolicy.Description" xml:space="preserve">
+    <value>Choose how to handle files that already exist before starting a download.</value>
+  </data>
+  <data name="DownloadSettingPage_ClearPackageOnCompletionWithFailure.Header" xml:space="preserve">
+    <value>Remove Failed Download Data</value>
+  </data>
+  <data name="DownloadSettingPage_ClearPackageOnCompletionWithFailure.Description" xml:space="preserve">
+    <value>Delete temporary download data when a download fails.</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytesInfoBar.Message" xml:space="preserve">
+    <value>Once this limit is reached, app will stop downloading and start writing the buffered data to a file stream before continuing. This setting is particularly useful when: 1. Downloading large files on systems with limited memory 2. Preventing out-of-memory exceptions during parallel downloads 3. Optimizing memory usage for long-running download operations. For systems with 4GB RAM: 256MB (268435456 bytes). For systems with 8GB RAM: 512MB (536870912 bytes). For systems with 16GB RAM: 1GB (1073741824 bytes) </value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytesInfoBar.Title" xml:space="preserve">
+    <value>Gets or sets the maximum amount of memory, in bytes, that the app is allowed to allocate for buffering downloaded content.</value>
+  </data>
+  <data name="DownloadSettingPage_MaximumMemoryBufferBytesInfoBar2.Title" xml:space="preserve">
+    <value>Setting this value too low may impact download performance due to frequent disk I/O operations.</value>
+  </data>
+  <data name="DownloadSettingPage_Memory.Header" xml:space="preserve">
+    <value>Memory</value>
+  </data>
+  <data name="DownloadSettingPage_Memory.Description" xml:space="preserve">
+    <value>Control memory usage while downloading.</value>
+  </data>
+  <data name="DownloadSettingPage_ResetInfoBar.Title" xml:space="preserve">
+    <value>Reset Download Settings</value>
+  </data>
+  <data name="DownloadSettingPage_ResetInfoBar.Message" xml:space="preserve">
+    <value>Restore all download settings to their default values. This action cannot be undone.</value>
+  </data>
+  <data name="DownloadSettingPage_ResetButton.Content" xml:space="preserve">
+    <value>Reset to Defaults</value>
+  </data>
+  <data name="DownloadSettingPage_ResetConfirmDialog.Title" xml:space="preserve">
+    <value>Reset Download Settings</value>
+  </data>
+  <data name="DownloadSettingPage_ResetConfirmDialog.Message" xml:space="preserve">
+    <value>Are you sure you want to reset all download settings to their default values? This action cannot be undone.</value>
+  </data>
+  <data name="DownloadSettingPage_ResetSuccessDialog.Title" xml:space="preserve">
+    <value>Download Settings Reset</value>
+  </data>
+  <data name="DownloadSettingPage_ResetSuccessDialog.Message" xml:space="preserve">
+    <value>All download settings have been successfully restored to their default values.</value>
+  </data>
+  <data name="GeneralSettingPage_UseShellIcons.Header" xml:space="preserve">
+    <value>Use Windows File Icons</value>
+  </data>
+  <data name="GeneralSettingPage_UseShellIcons.Description" xml:space="preserve">
+    <value>Display file icons provided by Windows based on each file type instead of the built-in icons.</value>
+  </data>
+  <data name="DownloadStatus_None" xml:space="preserve">
+    <value>Not Started</value>
+  </data>
+  <data name="DownloadStatus_Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="DownloadStatus_Running" xml:space="preserve">
+    <value>Downloading</value>
+  </data>
+  <data name="DownloadStatus_Stopped" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="DownloadStatus_Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="DownloadStatus_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="DownloadStatus_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="PropertiesDialog.Header" xml:space="preserve">
+    <value>File Properties</value>
+  </data>
+  <data name="PropertiesDialog.PrimaryButtonContent" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="PropertiesDialog.SecondaryButtonContent" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="DeleteConfirmationDialog.Title" xml:space="preserve">
+    <value>Delete Items</value>
+  </data>
+  <data name="DeleteConfirmationDialog.Message" xml:space="preserve">
+    <value>Are you sure you want to delete the selected item(s)?</value>
+  </data>
+  <data name="DownloadWindow_URL.Header" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="DownloadWindow_SaveAs.Header" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="DownloadWindow_DownloadLater.Content" xml:space="preserve">
+    <value>Download Later</value>
+  </data>
+  <data name="DownloadWindow_StartDownload.Content" xml:space="preserve">
+    <value>Start Download</value>
+  </data>
+  <data name="DownloadWindow_CancelDownload.Content" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SpeedLimitDialog.Header" xml:space="preserve">
+    <value>Limit Download Speed</value>
+  </data>
+  <data name="SpeedLimitDialog.PrimaryButtonContent" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="SpeedLimitDialog.CloseButtonContent" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SpeedLimitDialog_TitleBlock.Text" xml:space="preserve">
+    <value>Speed Limit</value>
+  </data>
+  <data name="SpeedLimitDialog_DescriptionBlock.Text" xml:space="preserve">
+    <value>Set the maximum transfer speed. Enter 0 for unlimited.</value>
+  </data>
+  <data name="SpeedLimitDialog_NoLimit" xml:space="preserve">
+    <value>Maximum Speed</value>
+  </data>
+  <data name="MainWindow_NoDownload.Text" xml:space="preserve">
+    <value>No downloads yet</value>
+  </data>
+  <data name="MainWindow_NoDownloadDetail.Text" xml:space="preserve">
+    <value>Click the Add button to get started.</value>
+  </data>
+  <data name="ScheduleWindow_ScheduleTab.Header" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="ScheduleWindow_QueueFilesTab.Header" xml:space="preserve">
+    <value>Queued Files</value>
+  </data>
+  <data name="ScheduleWindow_StartDownloadTime.Content" xml:space="preserve">
+    <value>Download Start Time</value>
+  </data>
+  <data name="ScheduleWindow_StopDownloadTime.Content" xml:space="preserve">
+    <value>Stop Download At</value>
+  </data>
+  <data name="ScheduleWindow_RetryFailedFiles.Content" xml:space="preserve">
+    <value>Retry Count for Failed Downloads</value>
+  </data>
+  <data name="ScheduleWindow_ClosePdmAfterDownloads.Content" xml:space="preserve">
+    <value>Close PDM After All Downloads Complete</value>
+  </data>
+  <data name="ScheduleWindow_ShutdownAfterDownloads.Content" xml:space="preserve">
+    <value>Shut Down Computer After All Downloads Complete</value>
+  </data>
+  <data name="ScheduleWindow_ForceCloseApps.Content" xml:space="preserve">
+    <value>Force Close Running Applications</value>
+  </data>
+  <data name="ScheduleWindow_ConcurrentDownload.Header" xml:space="preserve">
+    <value>Concurrent Downloads</value>
+  </data>
+  <data name="ScheduleWindow_StartButton.Content" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="ScheduleWindow_StopButton.Content" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="ScheduleWindow_CloseButton.Content" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RemainingTime_Idle" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="RemainingTime_Calculating" xml:space="preserve">
+    <value>Calculating...</value>
+  </data>
+  <data name="RemainingTime_SecondsFormat" xml:space="preserve">
+    <value>{0} seconds left</value>
+  </data>
+  <data name="RemainingTime_MinutesSecondsFormat" xml:space="preserve">
+    <value>{0} minutes {1} seconds left</value>
+  </data>
+  <data name="RemainingTime_HoursMinutesSecondsFormat" xml:space="preserve">
+    <value>{0} hours {1} minutes {2} seconds left</value>
+  </data>
+  <data name="RemainingTime_DaysHoursMinutesSecondsFormat" xml:space="preserve">
+    <value>{0} days {1} hours {2} minutes {3} seconds left</value>
+  </data>
+  <data name="CurrentDownloadWindow_TabDownloadStatus.Header" xml:space="preserve">
+    <value>Download Status</value>
+  </data>
+  <data name="CurrentDownloadWindow_FileSize.Text" xml:space="preserve">
+    <value>File Size</value>
+  </data>
+  <data name="CurrentDownloadWindow_Downloaded.Text" xml:space="preserve">
+    <value>Downloaded</value>
+  </data>
+  <data name="CurrentDownloadWindow_TimeLeft.Text" xml:space="preserve">
+    <value>Time left</value>
+  </data>
+  <data name="CurrentDownloadWindow_ResumeCapability.Text" xml:space="preserve">
+    <value>Resume capability</value>
+  </data>
+  <data name="CurrentDownloadWindow_TransferRate.Text" xml:space="preserve">
+    <value>Transfer Rate</value>
+  </data>
+  <data name="CurrentDownloadWindow_Pause.Label" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="CurrentDownloadWindow_Resume.Label" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="CurrentDownloadWindow_Cancel.Label" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CurrentDownloadWindow_Close.Label" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ResumeCapabilitySupported" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ResumeCapabilityNotSupported" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="FlowDirection.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="ReFlowDirection.FlowDirection" xml:space="preserve">
+    <value>RightToLeft</value>
+  </data>
+  <data name="MainWindowAutoSuggestBox.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="AddLinkDialog.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="PropertiesDialog.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="SpeedLimitDialog.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="AddGroupLinkDialog.FlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+</root>

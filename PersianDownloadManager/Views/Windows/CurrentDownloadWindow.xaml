@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window x:Class="PersianDownloadManager.Views.CurrentDownloadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:dev="using:DevWinUI"
+        xmlns:local="using:PersianDownloadManager.Views"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d">
+
+    <Grid x:Uid="FlowDirection" Background="{ThemeResource LayerOnMicaBaseAltFillColorDefaultBrush}" Loaded="Grid_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TitleBar x:Name="AppTitleBar" Title="{x:Bind CurrentTask.Item.FormattedProgress, Mode=OneWay}" FlowDirection="LeftToRight" Subtitle="{x:Bind CurrentTask.Item.FileName, Mode=OneWay}">
+            <TitleBar.IconSource>
+                <ImageIconSource ImageSource="ms-appx:///Assets/AppIcon.png" />
+            </TitleBar.IconSource>
+        </TitleBar>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TabView VerticalAlignment="Stretch" IsAddTabButtonVisible="False">
+                <TabViewItem x:Uid="CurrentDownloadWindow_TabDownloadStatus" IsClosable="False">
+                    <Grid Background="{ThemeResource LayerOnMicaBaseAltFillColorDefaultBrush}" RowSpacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <StackPanel Margin="10,10,10,0" Spacing="10">
+                            <TextBox IsReadOnly="True" Text="{x:Bind CurrentTask.Item.Url}" />
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <TextBlock x:Uid="CurrentDownloadWindow_FileSize" Style="{ThemeResource BaseTextBlockStyle}" />
+                                <TextBlock x:Name="TxtFileSize" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind CurrentTask.Item.Size}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <TextBlock x:Uid="CurrentDownloadWindow_Downloaded" Style="{ThemeResource BaseTextBlockStyle}" />
+                                <TextBlock Foreground="{ThemeResource TextFillColorSecondaryBrush}" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind CurrentTask.Item.DownloadedSizeWithProgress, Mode=OneWay}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <TextBlock x:Uid="CurrentDownloadWindow_TimeLeft" Style="{ThemeResource BaseTextBlockStyle}" />
+                                <TextBlock Foreground="{ThemeResource TextFillColorSecondaryBrush}" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind CurrentTask.Item.RemainingTime, Mode=OneWay}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <TextBlock x:Uid="CurrentDownloadWindow_ResumeCapability" Style="{ThemeResource BaseTextBlockStyle}" />
+                                <TextBlock x:Name="TxtIsResume" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind CurrentTask.Item.IsResumeCapabilitySupportedText, Mode=OneWay}" />
+                            </StackPanel>
+                        </StackPanel>
+
+
+                        <StackPanel x:Name="StckTransfer" Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal" Spacing="10" Visibility="{x:Bind CurrentTask.Item.ShowProgressBar, Mode=OneWay}">
+                            <TextBlock x:Uid="CurrentDownloadWindow_TransferRate" Style="{ThemeResource BaseTextBlockStyle}" />
+                            <TextBlock MinWidth="100" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind CurrentTask.Item.Speed, Mode=OneWay}" />
+                        </StackPanel>
+                        <dev:SpeedGraph2 x:Name="MainSpeedGraph" Grid.Row="1" />
+                    </Grid>
+                </TabViewItem>
+            </TabView>
+
+            <CommandBar Grid.Row="1" Padding="20,0,20,0" Background="{ThemeResource LayerOnMicaBaseAltFillColorSecondaryBrush}" DefaultLabelPosition="Right" OverflowButtonVisibility="Collapsed">
+                <AppBarToggleButton x:Name="PauseToggleButton" x:Uid="CurrentDownloadWindow_Pause" MinWidth="100" Checked="OnPauseChecked" Unchecked="OnPauseChecked">
+                    <AppBarToggleButton.Icon>
+                        <FontIcon Glyph="&#xE769;" />
+                    </AppBarToggleButton.Icon>
+                </AppBarToggleButton>
+                <AppBarButton x:Uid="CurrentDownloadWindow_Cancel" MinWidth="100" Click="OnCancelClick" IsEnabled="{x:Bind CurrentTask.Item.ShowProgressBar, Mode=OneWay}">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE711;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="CurrentDownloadWindow_Close" MinWidth="100" Click="OnCloseClick">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE944;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar>
+        </Grid>
+    </Grid>
+</Window>

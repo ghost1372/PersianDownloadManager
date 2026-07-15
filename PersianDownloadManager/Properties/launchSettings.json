@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PersianDownloadManager (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PersianDownloadManager (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

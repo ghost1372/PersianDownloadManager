@@ -1,0 +1,9 @@
+SHGetFileInfo
+GetIconInfo
+GetObject
+CreateCompatibleDC
+SelectObject
+GetDIBits
+DeleteDC
+BITMAPV5HEADER
+BITMAP
