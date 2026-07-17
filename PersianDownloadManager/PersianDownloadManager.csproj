@@ -25,6 +25,7 @@
 	<!--Remove git hash from assembly informational version in .NET >= 8, Example: false = 1.0.0, true = 1.0.0+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
 	<DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+	<EnabledXamlOptionalChanges>DefaultStyleOptimizations,OptimizeApplyStyles,DeferContextFlyoutInit,IconNoGridOptimization</EnabledXamlOptionalChanges>
   </PropertyGroup>
 
   <ItemGroup>
@@ -65,7 +66,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.3.0-prerelease.251115.2" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2270" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.2.0" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.3.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="Nucs.JsonSettings" Version="2.0.2" />
     <PackageReference Include="Nucs.JsonSettings.AutosaveGenerator" Version="2.0.4" />
